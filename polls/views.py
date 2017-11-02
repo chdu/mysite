@@ -5,7 +5,7 @@ from .models import Question
 
 
 def index(request):
-    lastest_question_list = Question.objects.order_by('-pub-date'[:5])
+    lastest_question_list = Question.objects.order_by('-pub_date'[:5])
     template = loader.get_template('polls/index.html')
     context = {
         'latest_question_list': lastest_question_list,
